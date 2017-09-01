@@ -6,15 +6,15 @@ import './leaflet.utfgrid';
 export default class UtfGrid extends MapLayer {
 	addEvents() { 
 		if (this.props.mouseMove) {
-			this.leafletElement.on('mousemove', this.props.onClick);
+			this.leafletElement.on('mousemove', this.props.mouseMove);
 		};
 
 		if (this.props.mouseOver) {
-			this.leafletElement.on('mouseover', this.props.onClick);
+			this.leafletElement.on('mouseover', this.props.mouseOver);
 		};
 
 		if (this.props.mouseOut) {
-			this.leafletElement.on('mouseout', this.props.onClick);
+			this.leafletElement.on('mouseout', this.props.mouseOut);
 		};
 
 		if (this.props.onClick) {
@@ -24,15 +24,15 @@ export default class UtfGrid extends MapLayer {
 
 	removeEvents() {
 		if (this.props.mouseMove) {
-			this.leafletElement.off('mousemove', this.props.onClick);
+			this.leafletElement.off('mousemove', this.props.mouseMove);
 		};
 
 		if (this.props.mouseOver) {
-			this.leafletElement.off('mouseover', this.props.onClick);
+			this.leafletElement.off('mouseover', this.props.mouseOver);
 		};
 
 		if (this.props.mouseOut) {
-			this.leafletElement.off('mouseout', this.props.onClick);
+			this.leafletElement.off('mouseout', this.props.mouseOut);
 		};
 
 		if (this.props.onClick) {
